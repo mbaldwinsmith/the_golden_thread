@@ -1,6 +1,6 @@
-Long I've wandered, seeking a name unknown,
-An identity, a moniker, a title to intone.
-An exile, a knight radiant, a keeper of hearths,
+Long I've wandered, seeking a name unknown,  
+An identity, a moniker, a title to intone.  
+An exile, a knight radiant, a keeper of hearths,  
 A tender of gardens, a pilgrim of many paths.
 
 I've walked on sunlit mountain tops,  
