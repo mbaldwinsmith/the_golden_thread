@@ -33,7 +33,7 @@ God's will now fulfilled, once questioned.
 Even in the throes of sexual union,  
 we find signs of the ultimate communion.
 
-Man and woman joined in sacramental sign,  
+Two lovers joined in sacramental sign,  
 in God's plan, heaven and earth align.  
 Some choose to give themselves to God alone,  
 both self-giving love for the Lamb's throne.
