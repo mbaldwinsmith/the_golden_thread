@@ -159,7 +159,8 @@ body {
   background: var(--paper);
   border: 1px solid rgba(184, 137, 43, 0.35);
   box-shadow: 0 30px 80px rgba(24, 18, 8, 0.45);
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   animation: rise 420ms cubic-bezier(.2,.8,.3,1.1);
 }
 @keyframes rise {
