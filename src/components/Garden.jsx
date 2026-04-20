@@ -275,7 +275,7 @@ export default function Garden() {
     <>
       <section className="hero">
         <div className="hero-inner">
-          <div className="hero-eyebrow">a poetic cycle by Mark Oriel</div>
+          <div className="hero-eyebrow">a poetic cycle by Mark Baldwin-Smith</div>
           <h1 className="hero-title">The Golden<br/>Thread</h1>
           <div className="hero-sub">
             Thirteen poems. One journey. Follow the thread.
