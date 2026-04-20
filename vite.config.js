@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: '/the_golden_thread/',
+  base: command === 'build' ? '/the_golden_thread/' : '/',
   publicDir: 'project',
-})
+}))

@@ -1,39 +1,10 @@
 # The Golden Thread
 
-A garden of thirteen poems by Mark Oriel. An interactive React site with a scroll-driven golden thread connecting each poem node.
+*A garden of thirteen poems by Mark Oriel.*
+
+An interactive React site where a scroll-driven golden thread connects thirteen poem nodes across a living canvas. Click any node to read the poem in a full-screen reader panel.
 
 **Live site:** https://mbaldwinsmith.github.io/the_golden_thread/
-
----
-
-## Deploy to GitHub Pages
-
-Follow these steps once to enable automatic deployment on every push to `main`.
-
-### 1. Enable GitHub Pages in the repository settings
-
-1. Go to your repository on GitHub: `https://github.com/mbaldwinsmith/the_golden_thread`
-2. Click **Settings** → **Pages** (in the left sidebar)
-3. Under **Source**, select **GitHub Actions**
-4. Click **Save**
-
-That's it. The workflow at [.github/workflows/deploy.yml](.github/workflows/deploy.yml) handles the rest.
-
-### 2. Push this code
-
-```bash
-git add .
-git commit -m "Add React site with GitHub Pages deployment"
-git push
-```
-
-The Actions workflow will run automatically. After ~1–2 minutes the site will be live at:
-
-```
-https://mbaldwinsmith.github.io/the_golden_thread/
-```
-
-You can watch the deployment progress under the **Actions** tab in the repository.
 
 ---
 
@@ -44,7 +15,13 @@ npm install
 npm run dev
 ```
 
-The dev server runs at `http://localhost:5173/the_golden_thread/`.
+Opens at `http://localhost:5173/`. The dev server hot-reloads on save.
+
+---
+
+## How it works
+
+Scroll down through the garden SVG canvas. As each poem node enters the viewport it fades in, and the golden thread draws itself toward it. Click a node to open the reader. Navigate between poems with the ← → buttons or arrow keys; close with Escape.
 
 ---
 
@@ -53,15 +30,21 @@ The dev server runs at `http://localhost:5173/the_golden_thread/`.
 ```
 src/
   main.jsx              # React entry point
-  App.jsx               # Top-level layout (compass bar, colophon)
+  App.jsx               # Compass bar + colophon overlay
   styles.css            # All visual styles
-  data/poems.js         # Poem text, images, palette, positions
+  data/poems.js         # Poem text, palette, and canvas positions
   components/
-    Garden.jsx          # Main canvas: scroll animation, thread, nodes, reader
-    Motif.jsx           # SVG vignette illustrations for each poem
+    Garden.jsx          # Scroll animation, thread, nodes, reader panel
+    Motif.jsx           # SVG vignette illustrations (one per poem)
 project/
-  images/               # Poem images (served as public assets)
-  index.html            # Original design prototype (reference only)
+  images/               # Poem images (served as static assets)
 ```
 
-Images in `project/images/` are served directly as static assets by Vite (via `publicDir: 'project'`).
+---
+
+## Deployment
+
+Pushes to `main` automatically deploy to GitHub Pages via the workflow at [.github/workflows/deploy.yml](.github/workflows/deploy.yml). No manual steps needed after the initial setup:
+
+1. **Settings → Pages → Source: GitHub Actions** (one-time)
+2. Merge to `main` — the rest is automatic
