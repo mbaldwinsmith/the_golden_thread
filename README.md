@@ -1,22 +1,67 @@
-# CODING AGENTS: READ THIS FIRST
+# The Golden Thread
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+A garden of thirteen poems by Mark Oriel. An interactive React site with a scroll-driven golden thread connecting each poem node.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+**Live site:** https://mbaldwinsmith.github.io/the_golden_thread/
 
-## What you should do — IMPORTANT
+---
 
-**Read `the-golden-thread/project/index.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+## Deploy to GitHub Pages
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+Follow these steps once to enable automatic deployment on every push to `main`.
 
-## About the design files
+### 1. Enable GitHub Pages in the repository settings
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+1. Go to your repository on GitHub: `https://github.com/mbaldwinsmith/the_golden_thread`
+2. Click **Settings** → **Pages** (in the left sidebar)
+3. Under **Source**, select **GitHub Actions**
+4. Click **Save**
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+That's it. The workflow at [.github/workflows/deploy.yml](.github/workflows/deploy.yml) handles the rest.
 
-## Bundle contents
+### 2. Push this code
 
-- `the-golden-thread/README.md` — this file
-- `the-golden-thread/project/` — the `The Golden Thread` project files (HTML prototypes, assets, components)
+```bash
+git add .
+git commit -m "Add React site with GitHub Pages deployment"
+git push
+```
+
+The Actions workflow will run automatically. After ~1–2 minutes the site will be live at:
+
+```
+https://mbaldwinsmith.github.io/the_golden_thread/
+```
+
+You can watch the deployment progress under the **Actions** tab in the repository.
+
+---
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+The dev server runs at `http://localhost:5173/the_golden_thread/`.
+
+---
+
+## Project structure
+
+```
+src/
+  main.jsx              # React entry point
+  App.jsx               # Top-level layout (compass bar, colophon)
+  styles.css            # All visual styles
+  data/poems.js         # Poem text, images, palette, positions
+  components/
+    Garden.jsx          # Main canvas: scroll animation, thread, nodes, reader
+    Motif.jsx           # SVG vignette illustrations for each poem
+project/
+  images/               # Poem images (served as public assets)
+  index.html            # Original design prototype (reference only)
+```
+
+Images in `project/images/` are served directly as static assets by Vite (via `publicDir: 'project'`).
