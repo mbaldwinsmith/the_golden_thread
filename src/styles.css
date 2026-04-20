@@ -56,7 +56,7 @@ body {
 .hero-eyebrow {
   font-family: 'EB Garamond', serif;
   font-style: italic;
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 0.22em;
   text-transform: lowercase;
   color: var(--gold);
@@ -81,7 +81,7 @@ body {
   letter-spacing: 0.01em;
 }
 .hero-scroll {
-  font-size: 12px;
+  font-size: 18px;
   letter-spacing: 0.28em;
   text-transform: lowercase;
   color: var(--ink-soft);
@@ -91,7 +91,7 @@ body {
   gap: 10px;
 }
 .hero-caret {
-  font-size: 18px;
+  font-size: 26px;
   color: var(--gold);
   animation: drift 2.6s ease-in-out infinite;
 }
