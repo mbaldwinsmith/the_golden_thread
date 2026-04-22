@@ -1,9 +1,11 @@
+import { GOLD, GOLD_BRIGHT } from '../constants/colors.js'
+
 export default function Motif({ kind, size = 80, color = "#3a2e1a" }) {
   const s = size
   const V = 100
   const ink = color
-  const gold = "#b8892b"
-  const goldBright = "#e0b850"
+  const gold = GOLD
+  const goldBright = GOLD_BRIGHT
 
   const paths = {
     "lotus": (
