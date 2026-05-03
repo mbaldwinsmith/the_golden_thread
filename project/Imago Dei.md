@@ -1,44 +1,34 @@
-Made above, to steward all creatures,  
-sapience, wisdom, your Image our features.  
-Self-aware and open always to You,  
-no Temple curtain, divinity in view.
+Made above, to steward all creatures,
+sapience, wisdom, your Image our features.
+Man and woman, made for communion,
+From one, one again, ruling dominion.
 
-Man and woman, made for communion,  
-mutual self-gift in perfect union.  
-Complementary halves of supplementary whole,  
-a crowning addendum in our regal role.
+King and queen, halves of one whole,
+crowning union in our regal role.
+Naked in the beginning, without shame,
+Together and transparent, life before blame.
 
-Naked in the beginning, without shame,  
-innocent and transparent, life before blame.  
-Your image reflected in us, Creation made holy,  
-we were unadorned, yet imaged You solely.
+Darkness whispered, the leaf was worn,
+Life's promise foregone, union torn.
+Our bodies remained, good but broken,
+marred images remembered the love first spoken.
 
-Darkness whispered, innocence was lost,  
-Man and woman, now ashamed, paid the cost.  
-Shame entered our experience for the first,  
-misplaced affections became our sinful thirst.
-
-Our bodies remained good but broken,  
-marred images remembered the love first spoken.  
-An inclination to sin found in concupiscence,  
+Disordered desire descends, sin too intense,
 yet still our prayers climb to God like incense.
+All creation cries out for its Lord,
+in Him, broken lives are restored.
 
-All creation cries out for a Saviour,  
-and His love for us never did waver,  
-through mountain and valley He remained true,  
-waiting for the day He'd make all things new.
+Through mountain and valley He remains true,
+waiting for the day He'll make all things new.
+For righteous Sun, our bodies destined,
+His will for us: gold refined.
 
-For glory our bodies are destined,  
-God's will now fulfilled, once questioned.  
-Even in the throes of sexual union,  
+Even in the throes of sexual union,
 we find signs of the ultimate communion.
+Two lovers joined in sacramental sign,
+in God's plan, heaven and earth align.
 
-Two lovers joined in sacramental sign,  
-in God's plan, heaven and earth align.  
-Some choose to give themselves to God alone,  
-both self-giving love for the Lamb's throne.
-
-He appeared in locked rooms, to hundreds at a time,  
-whatever the mystery, our new bodies will be sublime.  
-A garden of many flowers, each lending their sweet scent,  
-by grace, our new bodies too will go where the Son went.
+Others called to give themselves to God alone,
+a feast of love before the Lamb's throne.
+A garden of many flowers, lending their sweet scent,
+by grace, our new bodies will go where the Son went.
