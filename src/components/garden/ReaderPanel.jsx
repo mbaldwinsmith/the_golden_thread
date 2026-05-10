@@ -47,7 +47,7 @@ export default function ReaderPanel({ poem, onClose, onPrev, onNext, fading, ind
               <Motif kind={poem.motif} size={68} color={poem.palette.ink} />
             )}
           </div>
-          <div className="reader-eyebrow">From the garden</div>
+          <div className="reader-eyebrow">{poem.label}</div>
           <h1 className="reader-title">{poem.title}</h1>
           {poem.epigraph && (
             <p className="reader-epigraph">{poem.epigraph}</p>

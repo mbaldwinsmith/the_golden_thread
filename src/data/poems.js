@@ -2,6 +2,7 @@ export const POEMS = [
   {
     id: "the-exile",
     title: "The Exile",
+    label: "from the wilderness",
     motif: "lotus",
     image: "images/the-exile.jpeg",
     x: 0.3, y: 0.04,
@@ -58,6 +59,7 @@ Home, at last, an exile no more.`
   {
     id: "since-the-beginning",
     title: "Since the Beginning",
+    label: "from before time",
     motif: "morning-star",
     image: "images/since-the-beginning.jpeg",
     x: 0.7, y: 0.11,
@@ -106,6 +108,7 @@ Every one treasured since the beginning.`
   {
     id: "imago-dei",
     title: "Imago Dei",
+    label: "from the beginning",
     motif: "vesica",
     image: "images/imago-dei.jpeg",
     x: 0.32, y: 0.182,
@@ -149,6 +152,7 @@ by grace, our new bodies will go where the Son went.`
   {
     id: "for-love-in-love",
     title: "For Love, In Love, He Made You",
+    label: "from the Father",
     motif: "dove",
     image: "images/for-love-in-love.jpeg",
     x: 0.72, y: 0.253,
@@ -187,6 +191,7 @@ glorifying God in all they do.`
   {
     id: "radiant-knight",
     title: "Radiant Knight",
+    label: "from the threshold",
     motif: "sword-shield",
     image: "images/radiant-knight.jpeg",
     x: 0.3, y: 0.324,
@@ -230,6 +235,7 @@ so they might see You in me too.`
   {
     id: "my-peace",
     title: "My Peace I Give to You",
+    label: "from the risen Christ",
     motif: "olive",
     image: "images/my-peace.jpeg",
     x: 0.7, y: 0.395,
@@ -256,6 +262,7 @@ Come to My Father boldly, the curtain is torn.`
   {
     id: "pour-out",
     title: "Pour Out My Soul",
+    label: "from the heart",
     motif: "chalice-incense",
     image: "images/pour-out.jpeg",
     x: 0.32, y: 0.466,
@@ -309,6 +316,7 @@ it sweetens all I do.`
   {
     id: "all-of-my-creatures",
     title: "All of My Creatures",
+    label: "from the cosmic Christ",
     motif: "lamb",
     image: "images/all-of-my-creatures.jpeg",
     x: 0.72, y: 0.537,
@@ -352,6 +360,7 @@ come to God's Lamb and adore.`
   {
     id: "sweet-sophia",
     title: "Sweet Sophia, Holy Hokhmah",
+    label: "from the threshold",
     motif: "seven-petal",
     image: "images/sweet-sophia.jpeg",
     x: 0.3, y: 0.608,
@@ -387,6 +396,7 @@ In eternal love, a garden of many flowers.`
   {
     id: "a-name-untold",
     title: "A Name Untold",
+    label: "from the depths",
     motif: "oak",
     image: "images/a-name-untold.jpeg",
     x: 0.7, y: 0.679,
@@ -420,6 +430,7 @@ I am given my name, the Oaken Pilgrim.`
   {
     id: "even-ground",
     title: "Even Ground",
+    label: "from the pilgrim path",
     motif: "skylark",
     image: "images/even-ground.jpeg",
     x: 0.32, y: 0.75,
@@ -446,6 +457,7 @@ over a meandering landscape, peace to impart.`
   {
     id: "rose-bower",
     title: "The Rose Bower",
+    label: "from the garden",
     motif: "rose",
     image: "images/rose-bower.jpeg",
     x: 0.72, y: 0.821,
@@ -477,6 +489,7 @@ The sweet scent calls me home.`
   {
     id: "communion",
     title: "Communion",
+    label: "from the table",
     motif: "chalice",
     image: "images/communion.jpeg",
     x: 0.5, y: 0.91,
