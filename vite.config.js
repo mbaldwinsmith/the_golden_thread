@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: command === 'build' ? '/the_golden_thread/' : '/',
+  base: command === 'build' ? '/' : '/',
   publicDir: 'project',
 }))
