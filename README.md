@@ -4,8 +4,6 @@
 
 An interactive React site where a scroll-driven golden thread connects thirteen poem nodes across a living canvas. Click any node to read the poem in a full-screen reader panel.
 
-**Live site:** https://mbaldwinsmith.github.io/the_golden_thread/
-
 ---
 
 ## Local development
