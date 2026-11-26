@@ -6,12 +6,15 @@ import Grasses from './garden/Grasses.jsx'
 import PoemNode from './garden/PoemNode.jsx'
 import ReaderPanel from './garden/ReaderPanel.jsx'
 
+import { poemAt, poemPath, neighbour } from '../publication.js'
+
 const W = 1000
 const H = 2800
 
-export default function Garden() {
+export default function Garden({ path }) {
   const poems = POEMS
-  const [activeId, setActiveId] = useState(null)
+  const activePoem = poemAt(path)
+  const activeId = activePoem?.id
   const [visibleIds, setVisibleIds] = useState(new Set())
   const [threadProgress, setThreadProgress] = useState(0)
   const [fading, setFading] = useState(false)
@@ -60,15 +63,43 @@ export default function Garden() {
     return () => { document.body.style.overflow = '' }
   }, [activeId])
 
-  const activePoem = poems.find(p => p.id === activeId)
-  const activeIdx = poems.findIndex(p => p.id === activeId)
+  const activeIdx = poems.indexOf(activePoem)
+  const timer = useRef(null)
+  const openingNode = useRef(null)
 
-  const navigate = (newId) => {
-    setFading(true)
-    setTimeout(() => { setActiveId(newId); setFading(false) }, 180)
+  useEffect(() => {
+    if (!activeId && openingNode.current) {
+      openingNode.current.focus({ preventScroll: true })
+      openingNode.current = null
+    }
+  }, [activeId])
+
+  useEffect(() => {
+    const cancel = () => { clearTimeout(timer.current); setFading(false) }
+    window.addEventListener('popstate', cancel)
+    return () => { window.removeEventListener('popstate', cancel); clearTimeout(timer.current) }
+  }, [])
+
+  function openPoem(poem) {
+    const depth = history.state?.gardenDepth ?? (path === '/' ? 0 : null)
+    history.pushState({ gardenDepth: depth === null ? null : depth + 1 }, '', poemPath(poem))
+    window.dispatchEvent(new PopStateEvent('popstate'))
   }
-  const goPrev = () => navigate(poems[(activeIdx - 1 + poems.length) % poems.length].id)
-  const goNext = () => navigate(poems[(activeIdx + 1) % poems.length].id)
+
+  function closeReader() {
+    clearTimeout(timer.current)
+    if (history.state?.gardenDepth > 0) history.go(-history.state.gardenDepth)
+    else {
+      history.replaceState(null, '', '/')
+      window.dispatchEvent(new PopStateEvent('popstate'))
+    }
+  }
+
+  function navigate(step) {
+    clearTimeout(timer.current)
+    setFading(true)
+    timer.current = setTimeout(() => openPoem(neighbour(activeIdx, step)), 180)
+  }
 
   let threadHead = null
   if (pathRef.current && pathLen > 0 && isFinite(pathLen)) {
@@ -84,11 +115,12 @@ export default function Garden() {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero" inert={activeId ? '' : undefined}>
         <div className="hero-inner">
           <div className="hero-eyebrow">a poetic cycle by Mark Baldwin-Smith</div>
           <h1 className="hero-title">The Golden<br/>Thread</h1>
           <div className="hero-sub">Thirteen poems. One journey. Follow the thread.</div>
+          <a className="contents-link" href="/poems/">All poems</a>
           <div className="hero-scroll">
             <span>scroll to begin</span>
             <div className="hero-caret">↓</div>
@@ -96,7 +128,7 @@ export default function Garden() {
         </div>
       </section>
 
-      <div className="garden-wrap">
+      <div className="garden-wrap" inert={activeId ? '' : undefined}>
         <svg
           ref={svgRef}
           viewBox={`0 0 ${W} ${H}`}
@@ -181,13 +213,16 @@ export default function Garden() {
               cy={p.y * H}
               visible={visibleIds.has(p.id)}
               active={activeId === p.id}
-              onClick={() => setActiveId(p.id)}
+              onClick={node => {
+                openingNode.current = node
+                openPoem(p)
+              }}
             />
           ))}
         </svg>
       </div>
 
-      <section className="coda">
+      <section className="coda" inert={activeId ? '' : undefined}>
         <div className="coda-inner">
           <div className="coda-ornament">
             <span>✦</span><span>✦</span><span>✦</span>
@@ -202,9 +237,9 @@ export default function Garden() {
 
       <ReaderPanel
         poem={activePoem}
-        onClose={() => setActiveId(null)}
-        onPrev={goPrev}
-        onNext={goNext}
+        onClose={closeReader}
+        onPrev={() => navigate(-1)}
+        onNext={() => navigate(1)}
         fading={fading}
         index={activeIdx}
         total={poems.length}

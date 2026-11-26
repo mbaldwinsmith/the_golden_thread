@@ -2,6 +2,8 @@ import { memo } from 'react'
 import Motif from '../Motif.jsx'
 import { wrapTitle } from '../../utils/text.js'
 
+import { poemPath, followLink } from '../../publication.js'
+
 const BASE = import.meta.env.BASE_URL
 const NODE_SIZE = 180
 const LINE_H = 34
@@ -11,7 +13,7 @@ const PoemNode = memo(function PoemNode({ poem, cx, cy, active, visible, onClick
   const s = NODE_SIZE
 
   return (
-    <g
+    <a href={poemPath(poem)} aria-label={poem.title}
       style={{
         cursor: "pointer",
         opacity: visible ? 1 : 0,
@@ -19,7 +21,7 @@ const PoemNode = memo(function PoemNode({ poem, cx, cy, active, visible, onClick
         transformOrigin: `${cx}px ${cy}px`,
         transition: `opacity 900ms ease ${index * 60}ms, transform 900ms cubic-bezier(.2,.8,.3,1.2) ${index * 60}ms`,
       }}
-      onClick={onClick}
+      onClick={event => followLink(event, () => onClick(event.currentTarget))}
     >
       <circle cx={s / 2} cy={s / 2} r={s * 0.52} fill={poem.palette.wash} opacity={0.9} />
       {poem.image ? (
@@ -92,7 +94,7 @@ const PoemNode = memo(function PoemNode({ poem, cx, cy, active, visible, onClick
       >
         read
       </text>
-    </g>
+    </a>
   )
 })
 
