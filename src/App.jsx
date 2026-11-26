@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Garden from './components/Garden.jsx'
 
-export default function App() {
+export default function App({ path = '/' }) {
   useEffect(() => {
     const onScroll = () => {
       const el = document.documentElement
@@ -21,7 +21,7 @@ export default function App() {
         <div className="thread-compass-bar" id="compass-bar" />
       </div>
       <div className="colophon">the golden thread · a garden of thirteen</div>
-      <Garden />
+      <Garden path={path} />
     </>
   )
 }
